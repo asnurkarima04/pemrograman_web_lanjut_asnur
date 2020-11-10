@@ -4,18 +4,18 @@ namespace App\Http\Controllers;
 
 class AnnungController extends Controller
 {
-    public function one()
+    public function home()
     {
-        return view("annung-1");
+        return view("home");
     }
 
-    public function two()
+    public function about()
     {
-        return view("annung-2");
+        return view("about");
     }
 
-    public function three()
+    public function product()
     {
-        return view("annung-3");
+        return view("product");
     }
 }

@@ -4,18 +4,18 @@ namespace App\Http\Controllers;
 
 class AsnurController extends Controller
 {
-    public function satu()
+    public function team()
     {
-        return view("asnur-1");
+        return view("team");
     }
 
-    public function dua()
+    public function profile()
     {
-        return view("asnur-2");
+        return view("profile");
     }
 
-    public function tiga()
+    public function contact()
     {
-        return view("asnur-3");
+        return view("contact");
     }
 }

@@ -1,12 +1,10 @@
-<html>
+@extends('tema.master')
 
-<head>
-    <title>This is my first blade</title>
-</head>
+@section('title')
+This is my first blade
+@endsection
 
-<body>
-    <h1>The View</h1>
-    <p>Hallo ini adalah view pertama saya !</p>
-</body>
-
-</html>
+@section('content')
+<h1>The View</h1>
+<p>Hallo ini adalah view pertama saya</p>
+@endsection

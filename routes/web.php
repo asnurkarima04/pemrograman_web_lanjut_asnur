@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UtamaController;
+use App\Http\Controllers\AnnungController;
+use App\Http\Controllers\AsnurController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,27 +21,32 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/* Latihan modul */
+Route::get("/testing-view", function () {
+    return view("view-1");
+});
+
+Route::get("/utama/test", [UtamaController::class, "test"]);
+Route::get("tema/bootstrap", [UtamaController::class, "index"]);
+
+
 /* MEMBUAT 5 URL */
 /* URL 1 */
 Route::get('/nama', function () {
     return 'Perkenalkan Nama saya <b> Asnur Karima </b>';
 });
-
 /* URL 2 */
 Route::get('/angkatan', function () {
     return 'Angkatan <b>2018</b>';
 });
-
 /* URL 3 */
 Route::get('/jurusan', function () {
     return 'Jurusan <b> S1 Teknik Informatika </b>';
 });
-
 /* URL 4 */
 Route::get('/universitas', function () {
     return 'Kuliah di <b>Universitas Muhammadiyah Kalimantan Timur</b>';
 });
-
 /* URL 5 */
 Route::get('/alamat', function () {
     return 'Saya berasal dari <b>kota Bontang</b>';
@@ -45,28 +54,11 @@ Route::get('/alamat', function () {
 
 
 
-
-Route::get("/testing-view", function () {
-    return view("view-1");
-});
-
-use App\Http\Controllers\UtamaController;
-
-Route::get("/utama/test", [UtamaController::class, "test"]);
-
-
 /* URL CONTROLLER 1 ANNUNG */
-
-use App\Http\Controllers\AnnungController;
-
-Route::get("/annung/one", [AnnungController::class, "one"]);
-Route::get("/annung/two", [AnnungController::class, "two"]);
-Route::get("/annung/three", [AnnungController::class, "three"]);
-
+Route::get("/annung/home", [AnnungController::class, "home"]);
+Route::get("/annung/about", [AnnungController::class, "about"]);
+Route::get("/annung/product", [AnnungController::class, "product"]);
 /* URL CONTROLLER 2 ASNUR */
-
-use App\Http\Controllers\AsnurController;
-
-Route::get("/asnur/satu", [AsnurController::class, "satu"]);
-Route::get("/asnur/dua", [AsnurController::class, "dua"]);
-Route::get("/asnur/tiga", [AsnurController::class, "tiga"]);
+Route::get("/asnur/team", [AsnurController::class, "team"]);
+Route::get("/asnur/profile", [AsnurController::class, "profile"]);
+Route::get("/asnur/contact", [AsnurController::class, "contact"]);
